@@ -7,11 +7,21 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
+    "pod:install": "bundle exec pod install --project-directory=ios",
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
+    "@rematch/core": "^2.2.0",
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
     "react": "18.2.0",
-    "react-native": "0.71.10"
+    "react-native": "0.71.10",
+    "react-native-safe-area-context": "^4.5.3",
+    "react-native-screens": "^3.20.0",
+    "react-redux": "^8.0.7",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -20,6 +30,7 @@
     "@react-native-community/eslint-config": "^3.2.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",
+    "@types/lodash": "^4.14.195",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
