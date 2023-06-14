@@ -24,9 +24,15 @@ export const PokeDex = () => {
   }, [data]);
 
   useEffect(() => {
-    setPokemonList(
-      data.filter(item => item.name.includes(searchTerm.toLowerCase())),
-    );
+    const debounceSearch = _.debounce(() => {
+      setPokemonList(
+        data.filter(item => item.name.includes(searchTerm.toLowerCase())),
+      );
+    }, 300);
+    debounceSearch();
+    return () => {
+      debounceSearch.cancel();
+    };
   }, [data, searchTerm]);
 
   const onButtonPress = (pokemon: Pokemon) => {
@@ -37,6 +43,7 @@ export const PokeDex = () => {
   const renderPokemon = (pokemon: Pokemon) => {
     return (
       <PokemonItem
+        key={pokemon.name}
         pokemon={pokemon}
         onPress={() => {
           onButtonPress(pokemon);
@@ -47,9 +54,7 @@ export const PokeDex = () => {
   };
 
   const onClear = () => {
-    inputRef?.current?.clear();
-    inputRef?.current?.focus();
-    setPokemonList(data);
+    setSearchTerm('');
   };
 
   return (
@@ -64,6 +69,7 @@ export const PokeDex = () => {
         <Button title="Clear" onPress={onClear} />
       </View>
       <FlatList
+        keyExtractor={item => item.name}
         style={styles.container}
         data={pokemonList}
         numColumns={2}
