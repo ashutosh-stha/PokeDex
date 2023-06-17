@@ -7,7 +7,7 @@ export interface Pokemon {
 }
 
 interface PokemonResponse {
-  results: any[];
+  results: Pokemon[];
 }
 
 interface PokemonState {
