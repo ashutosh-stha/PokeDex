@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, FlatList, StyleSheet, TextInput, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Dispatch, RootState} from '../../../model/store';
@@ -13,10 +13,9 @@ export const PokeDex = () => {
   const [pokemonList, setPokemonList] = useState<Array<Pokemon>>([]);
   const [selectedPokemon, setSelectedPokemon] = useState<Array<Pokemon>>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const inputRef = useRef<TextInput>(null);
 
   useEffect(() => {
-    dispatch.pokemon.loadPokemon();
+    dispatch.pokemon.loadPokemon({});
   }, [dispatch.pokemon]);
 
   useEffect(() => {
@@ -61,9 +60,9 @@ export const PokeDex = () => {
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
-          ref={inputRef}
           style={styles.textInput}
           value={searchTerm}
+          placeholder="Search Pokemon"
           onChangeText={text => setSearchTerm(text)}
         />
         <Button title="Clear" onPress={onClear} />

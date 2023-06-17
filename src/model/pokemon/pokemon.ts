@@ -1,17 +1,18 @@
 import {createModel} from '@rematch/core';
 import {RootModel} from '../models';
-import ApiService from '../../controller/ApiService';
 
 export interface Pokemon {
   name: string;
   url: string;
 }
 
+interface PokemonResponse {
+  results: any[];
+}
+
 interface PokemonState {
   pokemonList: Pokemon[];
 }
-
-const BASE_URL = 'https://pokeapi.co/api/v2';
 
 const initialState: PokemonState = {
   pokemonList: [],
@@ -25,12 +26,19 @@ export const pokemon = createModel<RootModel>()({
     },
   },
   effects: dispatch => ({
-    async loadPokemon() {
-      const apiService = new ApiService(BASE_URL);
-      const pokemonData = await apiService.get<any>(
-        '/pokemon?offset=30&limit=30',
-      );
-      dispatch.pokemon.setPokemonList(pokemonData.results);
+    async loadPokemon(_, rootState) {
+      const apiService = rootState.httpClient.apiService;
+      try {
+        const pokemonData = await apiService?.get<PokemonResponse>(
+          '/pokemon?offset=30&limit=30',
+        );
+        if (pokemonData) {
+          dispatch.pokemon.setPokemonList(pokemonData.results);
+        }
+      } catch (error) {
+        // Handle any errors here
+        console.error('Failed to load Pokemon:', error);
+      }
     },
   }),
 });

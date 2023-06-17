@@ -12,7 +12,7 @@ interface PokemonItemProps {
 export const PokemonItem: React.FC<PokemonItemProps> = ({
   pokemon,
   onPress,
-  selected,
+  selected = false,
 }) => {
   return (
     <TouchableOpacity
