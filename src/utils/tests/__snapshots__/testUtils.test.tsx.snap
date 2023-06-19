@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Renderer should render the component 1`] = `
+<Text>
+  Test Component
+</Text>
+`;

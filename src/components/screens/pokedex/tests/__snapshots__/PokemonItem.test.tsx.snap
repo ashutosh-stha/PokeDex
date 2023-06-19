@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonItem should render correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "backgroundColor": "#77BA99",
+      "borderRadius": 30,
+      "flex": 0.5,
+      "margin": 8,
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID="pokemonBtn"
+>
+  <Text
+    style={
+      {
+        "color": "white",
+        "fontSize": 16,
+        "textAlign": "center",
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    Pikachu
+  </Text>
+</View>
+`;
+
+exports[`PokemonItem when the pokemon is selected 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "backgroundColor": "#262730",
+      "borderRadius": 30,
+      "flex": 0.5,
+      "margin": 8,
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+  testID="pokemonBtn"
+>
+  <Text
+    style={
+      {
+        "color": "white",
+        "fontSize": 16,
+        "textAlign": "center",
+        "textTransform": "capitalize",
+      }
+    }
+  >
+    Pikachu
+  </Text>
+</View>
+`;

@@ -10,7 +10,7 @@ export const PokeDex = () => {
   const dispatch = useDispatch<Dispatch>();
   const data = useSelector((state: RootState) => state.pokemon?.pokemonList);
 
-  const [pokemonList, setPokemonList] = useState<Array<Pokemon>>([]);
+  const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [selectedPokemon, setSelectedPokemon] = useState<Array<Pokemon>>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -60,14 +60,16 @@ export const PokeDex = () => {
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
+          testID="searchBox"
           style={styles.textInput}
           value={searchTerm}
           placeholder="Search Pokemon"
           onChangeText={text => setSearchTerm(text)}
         />
-        <Button title="Clear" onPress={onClear} />
+        <Button testID="clearBtn" title="Clear" onPress={onClear} />
       </View>
       <FlatList
+        testID="pokemonList"
         keyExtractor={item => item.name}
         style={styles.container}
         data={pokemonList}

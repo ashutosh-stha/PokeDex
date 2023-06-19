@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {Pokemon} from '../../../model/pokemon/pokemon';
 
-interface PokemonItemProps {
+export interface PokemonItemProps {
   pokemon: Pokemon;
   onPress: () => void;
 
@@ -12,10 +12,11 @@ interface PokemonItemProps {
 export const PokemonItem: React.FC<PokemonItemProps> = ({
   pokemon,
   onPress,
-  selected = false,
+  selected,
 }) => {
   return (
     <TouchableOpacity
+      testID="pokemonBtn"
       key={pokemon.name}
       style={[styles.container, selected && styles.selectedContainer]}
       onPress={onPress}>
