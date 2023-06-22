@@ -8,7 +8,13 @@
     "lint": "eslint .",
     "start": "react-native start",
     "pod:install": "bundle exec pod install --project-directory=ios",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "e2e:android:build": "detox build --configuration android.emu.debug",
+    "e2e:android:run": "detox test --configuration android.emu.debug",git
+    "e2e:ios:build": "detox build --configuration ios.sim.debug",
+    "e2e:ios:run": "detox test --configuration ios.sim.debug",
+    "e2e:android": "yarn e2e:android:build && yarn e2e:android:run",
+    "e2e:ios": "yarn e2e:ios:build && yarn e2e:ios:run"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.6",
@@ -36,6 +42,7 @@
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
+    "detox": "^20.9.1",
     "eslint": "^8.19.0",
     "jest": "^29.2.1",
     "metro-react-native-babel-preset": "0.73.9",
