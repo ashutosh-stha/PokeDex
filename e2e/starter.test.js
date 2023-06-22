@@ -9,11 +9,11 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
+  it('should have first screen', async () => {
     await expect(element(by.id('searchBox'))).toBeVisible();
   });
 
-  it('should show hello screen after tap', async () => {
+  it('Filter should work', async () => {
     await element(by.id('searchBox')).typeText('Vulpix');
     await element(by.id('pokemonBtn')).tap();
     await element(by.id('clearBtn')).tap();

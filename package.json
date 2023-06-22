@@ -10,7 +10,7 @@
     "pod:install": "bundle exec pod install --project-directory=ios",
     "test": "jest --coverage",
     "e2e:android:build": "detox build --configuration android.emu.debug",
-    "e2e:android:run": "detox test --configuration android.emu.debug",git
+    "e2e:android:run": "detox test --configuration android.emu.debug",
     "e2e:ios:build": "detox build --configuration ios.sim.debug",
     "e2e:ios:run": "detox test --configuration ios.sim.debug",
     "e2e:android": "yarn e2e:android:build && yarn e2e:android:run",
