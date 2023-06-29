@@ -136,6 +136,17 @@ android {
             proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
         }
     }
+    flavorDimensions 'versions'
+    productFlavors {
+        pokedexQa {
+            dimension 'versions'
+            applicationIdSuffix '.qa'
+        }
+        dev {
+            dimension 'versions'
+            isDefault = true
+        }
+    }
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
