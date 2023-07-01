@@ -7,7 +7,11 @@ module.exports = {
     '<rootDir>/.*/routes',
     '<rootDir>/App',
   ],
-  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/__tests__/mocks/'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/__tests__/mocks/',
+    '<rootDir>/e2e/',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
