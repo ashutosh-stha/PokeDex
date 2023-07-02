@@ -12,4 +12,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+      - name: Installing node_modules
+        run: yarn install --frozen-lockfile
+      - name: Test
+        run: yarn test
       - run: echo "🍏 This job's status is ${{ job.status }}."
