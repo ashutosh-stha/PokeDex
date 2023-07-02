@@ -17,3 +17,10 @@ jobs:
       - name: Test
         run: yarn test
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  androidBuild:
+    name: Android
+    needs: [unitTest]
+    if: github.base_ref == 'master'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building Android"
