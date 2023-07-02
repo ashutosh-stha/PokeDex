@@ -15,28 +15,13 @@ jobs:
           cache: 'yarn'
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
-      - name: Caching node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node-
       - name: Test
         run: yarn test
       - run: echo "🍏 This job's status is ${{ job.status }}."
   androidBuild:
     name: Android
-    needs: [ unitTest ]
-#    if: github.ref == 'refs/heads/master'
+    needs: [unitTest]
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node-
-      - name: Build Android
-        run: yarn test
+      - run: yarn test
