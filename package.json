@@ -2,6 +2,9 @@
   "name": "PokeDex",
   "version": "0.2.0-0",
   "private": true,
+  "np": {
+    "tests": "false"
+  },
   "scripts": {
     "android": "react-native run-android --variant=devDebug",
     "android:qa": "react-native run-android --variant=pokedexQaDebug",
