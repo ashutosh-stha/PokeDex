@@ -20,7 +20,7 @@ jobs:
   androidBuild:
     name: Android
     needs: [unitTest]
-    if: github.base_ref == 'master'
+    if: github.ref == 'master'
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building Android"
