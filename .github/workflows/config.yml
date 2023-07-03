@@ -27,7 +27,7 @@ jobs:
   androidBuild:
     name: Android
     needs: [unitTest]
-#     if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
