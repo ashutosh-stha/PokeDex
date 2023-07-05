@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="NA7-AF-gFs">
-                                <rect key="frame" x="67" y="217" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoQA" id="NA7-AF-gFs">
+                                <rect key="frame" x="0.0" y="204" width="375" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokeDex" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="353" width="374" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PokeDexQA" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="0.0" y="348" width="375" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,6 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="NA7-AF-gFs" secondAttribute="bottom" constant="30" id="CAi-5G-aJp"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="NA7-AF-gFs" secondAttribute="centerX" id="byy-bW-HOb"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="NA7-AF-gFs" secondAttribute="bottom" constant="30" id="ei2-L3-BdI"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="NA7-AF-gFs" secondAttribute="bottom" constant="8" symbolic="YES" id="qZm-Ww-abz"/>
@@ -43,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="60" height="60"/>
+        <image name="LogoQA" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
