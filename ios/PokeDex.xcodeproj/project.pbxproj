@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4A5898D2863C7BA27DC7ABE4 /* libPods-PokeDex-PokeDexQA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3531F10F72707025629F60FA /* libPods-PokeDex-PokeDexQA.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B7A88BCF2A55D86000278EE3 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		B7A88BD02A55D86000278EE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		B7A88BD22A55D86000278EE3 /* libPods-PokeDex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-PokeDex.a */; };
 		B7A88BD42A55D86000278EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B7A88BD52A55D86000278EE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		B7A88BDF2A55DC1000278EE3 /* LaunchScreenQA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A88BDE2A55DC1000278EE3 /* LaunchScreenQA.storyboard */; };
@@ -31,12 +31,14 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PokeDex/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PokeDex/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-PokeDex-PokeDexTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeDex-PokeDexTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3531F10F72707025629F60FA /* libPods-PokeDex-PokeDexQA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeDex-PokeDexQA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-PokeDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex/Pods-PokeDex.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PokeDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex.release.xcconfig"; path = "Target Support Files/Pods-PokeDex/Pods-PokeDex.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PokeDex-PokeDexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexTests.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexTests/Pods-PokeDex-PokeDexTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-PokeDex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeDex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0CDE18F58674D933EB3632 /* Pods-PokeDex-PokeDexQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexQA.release.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PokeDex/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PokeDex-PokeDexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexTests.release.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexTests/Pods-PokeDex-PokeDexTests.release.xcconfig"; sourceTree = "<group>"; };
+		B205FC9CB35D35D6282F73B8 /* Pods-PokeDex-PokeDexQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexQA.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A88BDC2A55D86000278EE3 /* PokeDexQA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDexQA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A88BDD2A55D86000278EE3 /* PokeDex copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PokeDex copy-Info.plist"; path = "/Users/ashutoshshrestha/Documents/Projects/PokeDex/ios/PokeDex copy-Info.plist"; sourceTree = "<absolute>"; };
 		B7A88BDE2A55DC1000278EE3 /* LaunchScreenQA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreenQA.storyboard; path = PokeDex/LaunchScreenQA.storyboard; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A88BD22A55D86000278EE3 /* libPods-PokeDex.a in Frameworks */,
+				4A5898D2863C7BA27DC7ABE4 /* libPods-PokeDex-PokeDexQA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-PokeDex.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-PokeDex-PokeDexTests.a */,
+				3531F10F72707025629F60FA /* libPods-PokeDex-PokeDexQA.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +129,8 @@
 				5709B34CF0A7D63546082F79 /* Pods-PokeDex.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-PokeDex-PokeDexTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-PokeDex-PokeDexTests.release.xcconfig */,
+				B205FC9CB35D35D6282F73B8 /* Pods-PokeDex-PokeDexQA.debug.xcconfig */,
+				5F0CDE18F58674D933EB3632 /* Pods-PokeDex-PokeDexQA.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -284,7 +288,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PokeDex-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PokeDex-PokeDexQA-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,15 +336,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7A88BD82A55D86000278EE3 /* [CP] Copy Pods Resources */ = {
@@ -349,15 +353,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeDex/Pods-PokeDex-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeDex-PokeDexQA/Pods-PokeDex-PokeDexQA-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
@@ -633,7 +637,7 @@
 		};
 		B7A88BDA2A55D86000278EE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-PokeDex.debug.xcconfig */;
+			baseConfigurationReference = B205FC9CB35D35D6282F73B8 /* Pods-PokeDex-PokeDexQA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = PokeDexQA;
 				CLANG_ENABLE_MODULES = YES;
@@ -660,7 +664,7 @@
 		};
 		B7A88BDB2A55D86000278EE3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-PokeDex.release.xcconfig */;
+			baseConfigurationReference = 5F0CDE18F58674D933EB3632 /* Pods-PokeDex-PokeDexQA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = PokeDexQA;
 				CLANG_ENABLE_MODULES = YES;
