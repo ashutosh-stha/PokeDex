@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B74311CC2A4CB803004A2EF9"
+               BlueprintIdentifier = "B7A88BCB2A55D86000278EE3"
                BuildableName = "PokeDexQA.app"
                BlueprintName = "PokeDexQA"
                ReferencedContainer = "container:PokeDex.xcodeproj">
@@ -43,7 +43,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74311CC2A4CB803004A2EF9"
+            BlueprintIdentifier = "B7A88BCB2A55D86000278EE3"
             BuildableName = "PokeDexQA.app"
             BlueprintName = "PokeDexQA"
             ReferencedContainer = "container:PokeDex.xcodeproj">
@@ -60,7 +60,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B74311CC2A4CB803004A2EF9"
+            BlueprintIdentifier = "B7A88BCB2A55D86000278EE3"
             BuildableName = "PokeDexQA.app"
             BlueprintName = "PokeDexQA"
             ReferencedContainer = "container:PokeDex.xcodeproj">
