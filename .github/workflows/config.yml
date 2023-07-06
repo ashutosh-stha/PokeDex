@@ -39,11 +39,11 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: Gem install bundle
-        run: gem install bundle
-      - name: Installing bundle
-        run: bundle install
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
+      - name: Gem install bundle
+        run: sudo gem install bundler
+      - name: Installing bundle
+        run: bundle install --deployment
       - name: Building APK
         run: bundle exec fastlane android build environment:dev type:release
