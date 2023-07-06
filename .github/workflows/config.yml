@@ -46,8 +46,11 @@ jobs:
         run: sudo gem install bundler
       - name: Installing bundle
         run: bundle install --deployment
-      - name: List files in the repository
+      - name: Print current directory
         run: |
-          ls ${{ github.workspace }}
+          echo "Current directory:"
+          pwd
+          echo "Files in current directory:"
+          ls
       - name: Building APK
         run: bundle exec fastlane android build environment:dev type:release
