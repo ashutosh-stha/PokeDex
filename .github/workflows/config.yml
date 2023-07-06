@@ -46,4 +46,5 @@ jobs:
       - name: Installing bundle
         run: bundle install --deployment
       - name: Building APK
+        working-directory: ./fastlane  # Specify the path to the "fastlane" folder
         run: bundle exec fastlane android build environment:dev type:release
