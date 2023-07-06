@@ -27,7 +27,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   androidBuild:
     name: Android
-    needs: [unitTest]
+#    needs: [unitTest]
 #    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
