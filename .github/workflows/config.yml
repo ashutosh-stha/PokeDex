@@ -33,6 +33,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6.10p210' # Not needed with a .ruby-version file
       - name: Restore Yarn cache
         uses: actions/cache@v2
         with:
@@ -42,15 +46,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
-      - name: Gem install bundle
-        run: sudo gem install bundler
-      - name: Installing bundle
-        run: bundle install --deployment
-      - name: Print current directory
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Files in current directory:"
-          ls
+      - name: Bundle install
+        run: bundle install
       - name: Building APK
         run: bundle exec fastlane android build environment:dev type:release
