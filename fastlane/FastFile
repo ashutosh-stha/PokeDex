@@ -1,0 +1,42 @@
+platform :android do
+    lane :build do |options|
+        flavor = case options[:environment]
+            when 'qa' then 'pokedexQa'
+            else 'dev'
+        end
+
+        build_type = case options[:type]
+            when 'release' then 'Release'
+            else 'Debug'
+        end
+
+        gradle(
+            task: 'clean assemble',
+            build_type: build_type,
+            flavor: flavor,
+            project_dir: 'android/'
+        )
+    end
+    lane :install do |options|
+        if options[:app] == 'qa'
+            apk = case options[:type]
+                when 'release' then 'android/app/build/outputs/apk/pokedexQa/release/app-pokedexQa-release.apk'
+                else 'android/app/build/outputs/apk/pokedexQa/debug/app-pokedexQa-debug.apk'
+            end
+        else
+            apk = case options[:type]
+                when 'release' then 'android/app/build/outputs/apk/dev/release/app-dev-release.apk'
+                else 'android/app/build/outputs/apk/dev/debug/app-dev-debug.apk'
+            end
+        end
+
+        if apk
+            adb(
+                command: "install #{apk}"
+            )
+        else
+            UI.important "Please specify the application (accepted values are: qa, dev) and build type (accepted values are: release, debug) to install."
+        end
+    end
+end
+
