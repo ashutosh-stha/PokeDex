@@ -46,6 +46,8 @@ jobs:
         run: sudo gem install bundler
       - name: Installing bundle
         run: bundle install --deployment
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - name: Building APK
-        working-directory: ./  # Specify the path to the "fastlane" folder
         run: bundle exec fastlane android build environment:dev type:release
