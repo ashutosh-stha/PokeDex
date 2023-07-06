@@ -52,6 +52,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Bundle install
         run: bundle install
+      - name: Check Fastlane version
+        run: fastlane --version
       - name: Building APK
         working-directory: '/home/runner/work/PokeDex/PokeDex'
         run: bundle exec fastlane android build environment:dev type:release
