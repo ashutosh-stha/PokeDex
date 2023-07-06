@@ -36,7 +36,7 @@ jobs:
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6.10p210' # Not needed with a .ruby-version file
+          ruby-version: '2.6.10' # Not needed with a .ruby-version file
       - name: Restore Yarn cache
         uses: actions/cache@v2
         with:
