@@ -55,8 +55,8 @@ jobs:
       - name: Check Fastlane version
         run: bundle exec fastlane --version
       - name: List files in current directory
-        working-directory: pwd
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
         run: ls -al
       - name: Building APK
-        working-directory: pwd
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
         run: bundle exec fastlane android build environment:dev type:release
