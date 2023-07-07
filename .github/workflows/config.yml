@@ -40,7 +40,7 @@ jobs:
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6.10' # Not needed with a .ruby-version file
+          ruby-version: '2.6'
       - name: Restore Yarn cache
         uses: actions/cache@v2
         with:
@@ -50,6 +50,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
+      - name: Install Fastlane
+        run: gem install fastlane -v 2.213.0
       - name: Bundle install
         run: bundle install
       - name: Check Fastlane version
