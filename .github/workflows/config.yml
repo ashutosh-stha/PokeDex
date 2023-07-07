@@ -57,5 +57,5 @@ jobs:
       - name: Check Fastlane version
         run: bundle exec fastlane --version
       - name: Building APK
-        working-directory: '/home/runner/work/PokeDex/PokeDex'
-        run: sudo bundle exec fastlane android build environment:dev type:release
+        working-directory: '/home/runner/work/PokeDex'
+        run: bundle exec fastlane android build environment:dev type:release
