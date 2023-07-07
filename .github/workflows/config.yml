@@ -56,6 +56,12 @@ jobs:
         run: bundle install
       - name: Check Fastlane version
         run: bundle exec fastlane --version
+      - name: Print current directory and PATH
+        run: |
+          echo "Current directory: $PWD"
+          echo "Items in PATH:"
+          echo $PATH
+          echo ls
       - name: Building APK
         working-directory: '/home/runner/work/PokeDex'
         run: bundle exec fastlane android build environment:dev type:release
