@@ -4,7 +4,6 @@ on: [push]
 jobs:
   unitTest:
     name: Test
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -27,8 +26,8 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   androidBuild:
     name: Android
-#    needs: [unitTest]
-#    if: github.ref == 'refs/heads/master'
+    needs: [unitTest]
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
