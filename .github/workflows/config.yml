@@ -53,6 +53,7 @@ jobs:
       - name: Bundle install
         run: bundle install
       - name: Check Fastlane version
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
         run: bundle exec fastlane --version
       - name: List files in current directory
         working-directory: '/home/runner/work/PokeDex/PokeDex/'
