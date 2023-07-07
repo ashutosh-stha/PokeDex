@@ -12,6 +12,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
       - name: Test
@@ -23,4 +30,33 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Building Android"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Installing node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - name: Restore Yarn cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Installing node_modules
+        run: yarn install --frozen-lockfile
+      - name: Bundle install
+        run: bundle install
+      - name: Check Fastlane version
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
+        run: bundle exec fastlane --version
+      - name: List files in current directory
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
+        run: ls -al
+      - name: Building APK
+        working-directory: '/home/runner/work/PokeDex/PokeDex/'
+        run: bundle exec fastlane android build environment:dev type:release

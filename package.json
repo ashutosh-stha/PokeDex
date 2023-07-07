@@ -6,8 +6,8 @@
     "tests": "false"
   },
   "scripts": {
-    "android": "react-native run-android --variant=devDebug",
-    "android:qa": "react-native run-android --variant=pokedexQaDebug",
+    "android": "react-native run-android --mode=devDebug",
+    "android:qa": "react-native run-android --mode=pokedexQaDebug",
     "ios": "react-native run-ios",
     "ios:qa": "react-native run-ios --scheme='PokeDexQA'",
     "lint": "eslint .",
