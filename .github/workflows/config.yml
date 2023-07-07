@@ -63,5 +63,4 @@ jobs:
           echo $PATH
           echo ls
       - name: Building APK
-        working-directory: '/home/runner/work/PokeDex'
         run: bundle exec fastlane android build environment:dev type:release
