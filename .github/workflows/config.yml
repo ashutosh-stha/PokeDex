@@ -50,17 +50,13 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
-      - name: Install Fastlane
-        run: gem install fastlane -v 2.213.0
       - name: Bundle install
         run: bundle install
       - name: Check Fastlane version
         run: bundle exec fastlane --version
-      - name: Print current directory and PATH
-        run: |
-          echo "Current directory: $PWD"
-          echo "Items in PATH:"
-          echo $PATH
-          echo ls
+      - name: List files in current directory
+        working-directory: pwd
+        run: ls -al
       - name: Building APK
+        working-directory: pwd
         run: bundle exec fastlane android build environment:dev type:release
