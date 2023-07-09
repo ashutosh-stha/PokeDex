@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {Button, FlatList, StyleSheet, TextInput, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Dispatch, RootState} from '../../../model/store';
@@ -11,7 +11,7 @@ export const PokeDex = () => {
   const data = useSelector((state: RootState) => state.pokemon?.pokemonList);
 
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
-  const [selectedPokemon, setSelectedPokemon] = useState<Array<Pokemon>>([]);
+  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -34,10 +34,13 @@ export const PokeDex = () => {
     };
   }, [data, searchTerm]);
 
-  const onButtonPress = (pokemon: Pokemon) => {
-    const selectedList = _.xor(selectedPokemon, [pokemon]);
-    setSelectedPokemon(selectedList);
-  };
+  const memoizeButtonPress = useCallback(
+    (pokemon: Pokemon) => {
+      const selectedList = _.xor(selectedPokemon, [pokemon]);
+      setSelectedPokemon(selectedList);
+    },
+    [selectedPokemon],
+  );
 
   const renderPokemon = (pokemon: Pokemon) => {
     return (
@@ -45,7 +48,7 @@ export const PokeDex = () => {
         key={pokemon.name}
         pokemon={pokemon}
         onPress={() => {
-          onButtonPress(pokemon);
+          memoizeButtonPress(pokemon);
         }}
         selected={selectedPokemon.includes(pokemon)}
       />
@@ -55,6 +58,8 @@ export const PokeDex = () => {
   const onClear = () => {
     setSearchTerm('');
   };
+
+  const memoizedPokemonList = useMemo(() => pokemonList, [pokemonList]);
 
   return (
     <View style={styles.container}>
@@ -72,7 +77,7 @@ export const PokeDex = () => {
         testID="pokemonList"
         keyExtractor={item => item.name}
         style={styles.container}
-        data={pokemonList}
+        data={memoizedPokemonList}
         numColumns={2}
         renderItem={({item}) => renderPokemon(item)}
       />

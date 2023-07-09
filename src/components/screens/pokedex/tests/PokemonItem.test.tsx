@@ -1,3 +1,4 @@
+import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 import {PokemonItem, PokemonItemProps} from '../PokemonItem';
 import {Pokemon} from '../../../../model/pokemon/pokemon';
