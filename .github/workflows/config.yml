@@ -1,6 +1,6 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Pokdex
+run-name: ${{ github.actor }} is testing out Pokedex 🚀
+on: [pull_request]
 jobs:
   unitTest:
     name: Test
@@ -21,6 +21,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Installing node_modules
         run: yarn install --frozen-lockfile
+      - name: Checking Lint
+        run: yarn lint
       - name: Test
         run: yarn test
       - run: echo "🍏 This job's status is ${{ job.status }}."

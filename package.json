@@ -10,7 +10,7 @@
     "android:qa": "react-native run-android --mode=pokedexQaDebug",
     "ios": "react-native run-ios",
     "ios:qa": "react-native run-ios --scheme='PokeDexQA'",
-    "lint": "eslint .",
+    "lint": "yarn outdated || true && eslint --quiet --cache .",
     "start": "react-native start",
     "pod:install": "bundle exec pod install --project-directory=ios",
     "test": "jest --coverage",
