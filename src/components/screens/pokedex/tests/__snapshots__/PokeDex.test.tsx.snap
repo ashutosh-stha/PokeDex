@@ -165,7 +165,7 @@ exports[`PokeDex should render correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               {
-                "backgroundColor": "#77BA99",
+                "backgroundColor": "#262730",
                 "borderRadius": 30,
                 "flex": 0.5,
                 "margin": 8,

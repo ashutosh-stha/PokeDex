@@ -3,6 +3,7 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 import {init} from '@rematch/core';
 import {render} from '@testing-library/react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 type WrapWithStore = {
   children: any;
@@ -12,7 +13,9 @@ type InitPropsType = {
 };
 const wrapWithStore = (store: Store) => {
   return ({children}: WrapWithStore) => (
-    <Provider store={store}>{children}</Provider>
+    <Provider store={store}>
+      <NavigationContainer>{children}</NavigationContainer>
+    </Provider>
   );
 };
 class ComponentRenderer {

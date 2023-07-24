@@ -7,6 +7,17 @@ import {act} from 'react-test-renderer';
 
 jest.useFakeTimers();
 
+const MOCK_NAVIGATE = jest.fn();
+jest.mock('@react-navigation/native', () => {
+  const actualNav = jest.requireActual('@react-navigation/native');
+  return {
+    ...actualNav,
+    useNavigation: () => ({
+      navigate: MOCK_NAVIGATE,
+    }),
+  };
+});
+
 const renderWrapper = () =>
   componentRenderer(<PokeDex />)
     .withModels({
@@ -26,6 +37,9 @@ describe('PokeDex', () => {
     wrapper = renderWrapper();
   });
   it('should render correctly', () => {
+    act(() => {
+      fireEvent.press(screen.getByTestId('pokemonBtn'));
+    });
     expect(wrapper).toMatchSnapshot();
   });
   it('when user types on the search box', () => {
@@ -42,10 +56,11 @@ describe('PokeDex', () => {
     });
     expect(screen.getByTestId('searchBox')).toHaveTextContent('');
   });
-  it('when user selects the pokemon button', () => {
+  it('when user selects the pokemon button', async () => {
     act(() => {
       fireEvent.press(screen.getByTestId('pokemonBtn'));
     });
+
     expect(screen.getByTestId('pokemonBtn')).toHaveStyle({
       backgroundColor: '#262730',
       borderRadius: 30,
@@ -53,6 +68,9 @@ describe('PokeDex', () => {
       margin: 8,
       opacity: 1,
       padding: 10,
+    });
+    expect(MOCK_NAVIGATE).toHaveBeenCalledWith('PokemonDetail', {
+      pokemon: 'Pikachu',
     });
   });
 });
