@@ -17,7 +17,7 @@ export const PokemonDetail: FC = () => {
   const pokemonDetailLoading = useSelector(
     (state: RootState) => state.loading.effects.pokemon.loadPokemonDetail,
   );
-  const {params} = useRoute<Route<'Pokemon', Props>>();
+  const {params} = useRoute<Route<'PokemonDetail', Props>>();
 
   useEffect(() => {
     dispatch.pokemon.loadPokemonDetail(params.pokemon);

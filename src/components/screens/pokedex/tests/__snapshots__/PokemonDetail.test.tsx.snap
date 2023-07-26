@@ -1,0 +1,407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetail should render correctly 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RNSScreenStack
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <RNSScreen
+      collapsable={false}
+      forwardedRef={[Function]}
+      gestureResponseDistance={
+        {
+          "bottom": -1,
+          "end": -1,
+          "start": -1,
+          "top": -1,
+        }
+      }
+      nativeBackButtonDismissalEnabled={false}
+      onAppear={[Function]}
+      onDisappear={[Function]}
+      onDismissed={[Function]}
+      onHeaderBackButtonClicked={[Function]}
+      onNativeDismissCancelled={[Function]}
+      onTransitionProgress={[Function]}
+      onWillDisappear={[Function]}
+      replaceAnimation="push"
+      stackPresentation="push"
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      swipeDirection="horizontal"
+    >
+      <RNSScreenStackHeaderConfig
+        backButtonInCustomView={false}
+        backgroundColor="rgb(255, 255, 255)"
+        color="rgb(0, 122, 255)"
+        direction="ltr"
+        disableBackButtonMenu={false}
+        hidden={false}
+        hideBackButton={false}
+        largeTitleHideShadow={false}
+        title="Test"
+        titleColor="rgb(28, 28, 30)"
+        topInsetEnabled={false}
+        translucent={false}
+      />
+      <View
+        accessibilityElementsHidden={false}
+        importantForAccessibility="auto"
+        style={
+          {
+            "flex": 1,
+            "flexDirection": "column-reverse",
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flex": 1,
+              },
+              {
+                "backgroundColor": "rgb(242, 242, 242)",
+              },
+              undefined,
+            ]
+          }
+        >
+          <RCTSafeAreaView
+            style={
+              {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    {
+                      "uri": "url",
+                    }
+                  }
+                  style={
+                    {
+                      "height": 150,
+                      "resizeMode": "stretch",
+                      "width": 150,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    [
+                      {
+                        "flexDirection": "column",
+                      },
+                      {
+                        "justifyContent": "center",
+                        "margin": 16,
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "fontSize": 20,
+                        "fontWeight": "bold",
+                        "marginBottom": 10,
+                        "textTransform": "capitalize",
+                      }
+                    }
+                  >
+                    Pikachu
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Type
+                  </Text>
+                  <View
+                    style={
+                      {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        {
+                          "marginRight": 8,
+                          "marginTop": 6,
+                          "textTransform": "capitalize",
+                        }
+                      }
+                    >
+                      electric
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </RCTSafeAreaView>
+        </View>
+      </View>
+    </RNSScreen>
+  </RNSScreenStack>
+</RNCSafeAreaProvider>
+`;
+
+exports[`PokemonDetail when data is loading 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RNSScreenStack
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <RNSScreen
+      collapsable={false}
+      forwardedRef={[Function]}
+      gestureResponseDistance={
+        {
+          "bottom": -1,
+          "end": -1,
+          "start": -1,
+          "top": -1,
+        }
+      }
+      nativeBackButtonDismissalEnabled={false}
+      onAppear={[Function]}
+      onDisappear={[Function]}
+      onDismissed={[Function]}
+      onHeaderBackButtonClicked={[Function]}
+      onNativeDismissCancelled={[Function]}
+      onTransitionProgress={[Function]}
+      onWillDisappear={[Function]}
+      replaceAnimation="push"
+      stackPresentation="push"
+      style={
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      swipeDirection="horizontal"
+    >
+      <RNSScreenStackHeaderConfig
+        backButtonInCustomView={false}
+        backgroundColor="rgb(255, 255, 255)"
+        color="rgb(0, 122, 255)"
+        direction="ltr"
+        disableBackButtonMenu={false}
+        hidden={false}
+        hideBackButton={false}
+        largeTitleHideShadow={false}
+        title="Test"
+        titleColor="rgb(28, 28, 30)"
+        topInsetEnabled={false}
+        translucent={false}
+      />
+      <View
+        accessibilityElementsHidden={false}
+        importantForAccessibility="auto"
+        style={
+          {
+            "flex": 1,
+            "flexDirection": "column-reverse",
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flex": 1,
+              },
+              {
+                "backgroundColor": "rgb(242, 242, 242)",
+              },
+              undefined,
+            ]
+          }
+        >
+          <RCTSafeAreaView
+            style={
+              {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "alignSelf": "center",
+                    "height": 40,
+                    "position": "relative",
+                    "transform": [
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 40,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "black",
+                      "borderRadius": 10,
+                      "height": 10,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": [
+                        {
+                          "translateX": 0,
+                        },
+                        {
+                          "translateY": 0,
+                        },
+                      ],
+                      "width": 10,
+                    }
+                  }
+                />
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "black",
+                      "borderRadius": 10,
+                      "height": 10,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "transform": [
+                        {
+                          "translateX": 0,
+                        },
+                        {
+                          "translateY": 0,
+                        },
+                      ],
+                      "width": 10,
+                    }
+                  }
+                />
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "black",
+                      "borderRadius": 10,
+                      "bottom": 0,
+                      "height": 10,
+                      "left": 0,
+                      "position": "absolute",
+                      "transform": [
+                        {
+                          "translateX": 0,
+                        },
+                        {
+                          "translateY": 0,
+                        },
+                      ],
+                      "width": 10,
+                    }
+                  }
+                />
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "backgroundColor": "black",
+                      "borderRadius": 10,
+                      "bottom": 0,
+                      "height": 10,
+                      "position": "absolute",
+                      "right": 0,
+                      "transform": [
+                        {
+                          "translateX": 0,
+                        },
+                        {
+                          "translateY": 0,
+                        },
+                      ],
+                      "width": 10,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </RCTSafeAreaView>
+        </View>
+      </View>
+    </RNSScreen>
+  </RNSScreenStack>
+</RNCSafeAreaProvider>
+`;

@@ -19,7 +19,7 @@ jest.mock('@react-navigation/native', () => {
 });
 
 const renderWrapper = () =>
-  componentRenderer(<PokeDex />)
+  componentRenderer(PokeDex)
     .withModels({
       pokemon: {
         state: {
