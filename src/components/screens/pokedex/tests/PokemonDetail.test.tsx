@@ -1,4 +1,3 @@
-import React from 'react';
 import {componentRenderer} from '../../../../utils/testUtils';
 import {PokemonDetail as PokemonDetailType} from '../../../../model/pokemon/pokemon';
 import {PokemonDetail} from '../PokemonDetail';

@@ -1,4 +1,3 @@
-import React from 'react';
 import {PokeDex} from '../PokeDex';
 import {componentRenderer} from '../../../../utils/testUtils';
 import {fireEvent, screen} from '@testing-library/react-native';
