@@ -5,6 +5,9 @@ import {Dispatch, RootState} from '../../../model/store';
 import {Pokemon} from '../../../model/pokemon/pokemon';
 import {PokemonItem} from './PokemonItem';
 import _ from 'lodash';
+import {useNavigation} from '@react-navigation/native';
+import {GenericNavigationProps} from '../../../routes/types';
+import {POKEMON_DETAIL} from '../../../routes/routes/ScreenRoutes';
 
 export const PokeDex = () => {
   const dispatch = useDispatch<Dispatch>();
@@ -13,6 +16,7 @@ export const PokeDex = () => {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const navigation = useNavigation<GenericNavigationProps>();
 
   useEffect(() => {
     dispatch.pokemon.loadPokemon({});
@@ -38,8 +42,9 @@ export const PokeDex = () => {
     (pokemon: Pokemon) => {
       const selectedList = _.xor(selectedPokemon, [pokemon]);
       setSelectedPokemon(selectedList);
+      navigation.navigate(POKEMON_DETAIL, {pokemon: pokemon.name});
     },
-    [selectedPokemon],
+    [navigation, selectedPokemon],
   );
 
   const renderPokemon = (pokemon: Pokemon) => {

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dots should render correctly 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#787878",
+        "borderRadius": 5,
+        "height": 10,
+        "marginHorizontal": 2,
+        "opacity": 1,
+        "width": 10,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#787878",
+        "borderRadius": 5,
+        "height": 10,
+        "marginHorizontal": 2,
+        "opacity": 1,
+        "width": 10,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#787878",
+        "borderRadius": 5,
+        "height": 10,
+        "marginHorizontal": 2,
+        "opacity": 1,
+        "width": 10,
+      }
+    }
+  />
+</View>
+`;

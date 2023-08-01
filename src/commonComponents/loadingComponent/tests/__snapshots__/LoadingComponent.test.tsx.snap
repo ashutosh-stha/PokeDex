@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingComponent should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "center",
+        "height": 40,
+        "position": "relative",
+        "transform": [
+          {
+            "rotate": "0deg",
+          },
+        ],
+        "width": 40,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "height": 10,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "transform": [
+            {
+              "translateX": 0,
+            },
+            {
+              "translateY": 0,
+            },
+          ],
+          "width": 10,
+        }
+      }
+    />
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "height": 10,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transform": [
+            {
+              "translateX": 0,
+            },
+            {
+              "translateY": 0,
+            },
+          ],
+          "width": 10,
+        }
+      }
+    />
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "bottom": 0,
+          "height": 10,
+          "left": 0,
+          "position": "absolute",
+          "transform": [
+            {
+              "translateX": 0,
+            },
+            {
+              "translateY": 0,
+            },
+          ],
+          "width": 10,
+        }
+      }
+    />
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "black",
+          "borderRadius": 10,
+          "bottom": 0,
+          "height": 10,
+          "position": "absolute",
+          "right": 0,
+          "transform": [
+            {
+              "translateX": 0,
+            },
+            {
+              "translateY": 0,
+            },
+          ],
+          "width": 10,
+        }
+      }
+    />
+  </View>
+</View>
+`;

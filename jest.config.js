@@ -1,7 +1,14 @@
 module.exports = {
   preset: 'react-native',
   coverageDirectory: '<rootDir>/coverage',
-  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-native/extend-expect',
+    '<rootDir>/config/jest-setup.ts',
+  ],
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)',
+  ],
+  setupFiles: ['<rootDir>/config/jest-setup.ts'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '<rootDir>/.*/routes',
